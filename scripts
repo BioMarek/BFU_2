@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+cd /home/sochorova/ModDotPlot
+source venv/bin/activate
+
+data_folder="/home/sochorova/ModDotPlot/data"
+result_folder="/home/sochorova/ModDotPlot/results"
+
+for file in "$data_folder"/*; do
+  if [[ -f "$file" ]]; then
+    base_name=$(basename "$file" | cut -d'.' -f1)
+    mkdir -p "$result_folder/$base_name"
+    moddotplot static -f "$file" -o "$result_folder/$base_name"
+  fi
+done
+
+
+#!/bin/bash
+#
+cd /home/sochorova/ModDotPlot
+source venv/bin/activate
+moddotplot interactive -f /home/sochorova/ModDotPlot/sequences/chr15_segment.fa
