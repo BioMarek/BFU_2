@@ -13,10 +13,3 @@ for file in "$data_folder"/*; do
     moddotplot static -f "$file" -o "$result_folder/$base_name"
   fi
 done
-
-
-#!/bin/bash
-#
-cd /home/sochorova/ModDotPlot
-source venv/bin/activate
-moddotplot interactive -f /home/sochorova/ModDotPlot/sequences/chr15_segment.fa
