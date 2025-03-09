@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+cd /home/sochorova/ModDotPlot
+source venv/bin/activate
+moddotplot interactive -f /home/sochorova/ModDotPlot/sequences/chr15_segment.fa
