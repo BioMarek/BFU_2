@@ -3,6 +3,8 @@
 ## CENH3 ChIP-seq of Rosa canina
 Sequences downloaded from here: https://www.ncbi.nlm.nih.gov/sra/SRX27753549%5Baccn%5D
 
+Sra-toolkit: https://github.com/ncbi/sra-tools/wiki/08.-prefetch-and-fasterq-dump
+
 ```bash
 
 sudo apt install sra-toolkit
