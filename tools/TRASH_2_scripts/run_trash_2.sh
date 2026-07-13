@@ -14,7 +14,7 @@ OUTPUT_DIR="$HOME/sochorova/TRASH_2/output"
 
 for file in "$INPUT_DIR"/*.fa; do
     filename=$(basename "$file")
-    output_name="${filename%.fasta}"
+    output_name="${filename%.fa}"
     mkdir -p "$OUTPUT_DIR/$output_name"
 
     Rscript src/TRASH.R -p 24 -f "$file" -o "$OUTPUT_DIR/$output_name"
