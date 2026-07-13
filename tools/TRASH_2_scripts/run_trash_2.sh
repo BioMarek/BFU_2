@@ -7,15 +7,15 @@ if [ -n "$CONDA_BASE" ]; then
     conda activate trash2
 fi
 
-cd "$HOME/marek/programming/BFU/TRASH_2/" || exit 1
+cd "$HOME/sochorova/TRASH_2/" || exit 1
 
-INPUT_DIR="$HOME/marek/programming/BFU/TRASH_2/input"
-OUTPUT_DIR="$HOME/marek/programming/BFU/TRASH_2/output"
+INPUT_DIR="$HOME/sochorova/TRASH_2/input"
+OUTPUT_DIR="$HOME/sochorova/TRASH_2/output"
 
-for file in "$INPUT_DIR"/*.fasta; do
+for file in "$INPUT_DIR"/*.fa; do
     filename=$(basename "$file")
     output_name="${filename%.fasta}"
     mkdir -p "$OUTPUT_DIR/$output_name"
 
-    Rscript src/TRASH.R -f "$file" -o "$OUTPUT_DIR/$output_name"
+    Rscript src/TRASH.R -p 24 -f "$file" -o "$OUTPUT_DIR/$output_name"
 done
