@@ -1,0 +1,9 @@
+biopython
+setuptools
+joblib
+numpy
+pandas
+python-levenshtein
+python-edlib
+networkx
+matplotlib
