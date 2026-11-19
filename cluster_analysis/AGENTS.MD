@@ -15,4 +15,4 @@
 - output of the script should be plot
 
 ### info
-- use local virtual environment for downloading libraries
+- use virtual environment located at /home/marek/marek/programming/BFU/BFU_2/.venv
